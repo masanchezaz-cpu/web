@@ -1,0 +1,1695 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    overflow-x: hidden;
+}
+
+
+
+:root {
+    --Naranja: #F27300;
+    --Morado: #A57AF3;
+    --Crema: #FAEADB;
+
+    --Alexandria: 'Alexandria', sans-serif;
+    --GrandHotel: 'Grand Hotel', cursive;
+    --Gidugu: 'Gidugu', sans-serif;
+}
+
+
+
+/* encabezado*/
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--Naranja);
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+.logo img {
+    max-width: clamp(130px, 18vw, 205px);
+    display: block;
+    margin: 0 auto 10px;   
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(20px, 3vw, 80px);
+
+    flex-wrap: wrap;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+}
+nav {
+    position: relative;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--Crema);
+    font-family: var(--Gidugu);
+    font-weight: 500;
+    font-size: clamp(24px, 3vw, 40px);
+    position: relative;
+}
+nav ul li:not(.icon-item) a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 0;
+    height: 3px;
+    background-color: var(--Crema);
+    transition: width 0.3s ease;
+}
+nav ul li:not(.icon-item) a:hover::after {
+    width: 100%;
+}
+.icon-item img {
+    width: 1.5em;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.icon-item:hover img {
+    transform: scale(1.15);
+}
+.separador {
+    width: min(78%, 1100px);
+    height: 2px;
+    background-color: var(--Crema);
+    margin: 0 auto -40px auto;
+}
+
+
+
+/* HERO 1 */
+
+
+
+.hero{
+    background-color: var(--Crema);
+    text-align: center;
+    padding: 220px 20px 200px;
+    position: relative;
+
+}
+
+.hero-contenido{
+    max-width: 650px;
+    margin-left: 8%;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.hero h1{
+    font-family: var(--GrandHotel);
+    color: var(--Morado);
+    font-size: 80px;
+    font-weight: normal;
+    line-height: 1.1;
+    margin-bottom: 70px;
+}
+.segunda-linea{
+    display: inline-block;
+    transform: translateX(55px);
+}
+
+.destacado{
+    background-color: var(--Morado);
+    color: var(--Crema);
+    padding: 0 20px;
+    border-radius: 20px;
+}
+
+.descripcion{
+    font-family: var(--Alexandria);
+    color: var(--Naranja);
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 1.3;
+    max-width: 550px;
+    margin: 0 auto 65px auto;
+    transform: translateX(50px);
+}
+
+.btn-principal{
+    margin-left: 50px;
+    display: inline-block;
+    background-color: var(--Morado);
+    color: var(--Crema);
+    text-decoration: none;
+    font-family: var(--Alexandria);
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px 20px;
+    border-radius: 40px;
+    position: relative;
+    z-index: 1;
+    transition:0.3s ease;
+}
+.btn-principal:hover {
+     background-color: var(--Naranja);  
+}
+
+.decoracionS1{
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+}
+
+.grupo-portada{
+    position: absolute;
+
+    top: 80px;
+    right: 5%;
+
+    width: min(42vw, 770px);
+}
+
+.portada{
+    width: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.corazon1{
+    position: absolute;
+
+    width: 36%;
+
+    top: 10px;
+    left: -10%;
+
+    z-index: 1;
+}
+
+.corazon2{
+    position: absolute;
+
+    width: 20%;
+
+    top: 100px;
+    right: 16%;
+
+    z-index: 1;
+}
+
+.logocorazon{
+    position: absolute;
+    width: 90px;
+
+    top: -80px;
+    right: 240px;
+}
+
+.brillo1,
+.brillo2,
+.brillo3{
+    position: absolute;
+}
+
+.brillo1{
+    width: 30px;
+    top: 120px;
+    left: 70px;
+}
+
+.brillo2{
+    width: 30px;
+    top: 35px;
+    right: 30px;
+}
+
+.brillo3{
+    width: 30px;
+    top: 390px;
+    right: 140px;
+}
+
+
+
+/* transicion */
+
+
+.transicion{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: -90px auto -50px auto;
+    position: relative;
+    z-index: 10;
+}
+
+
+/* HERO 2 */
+
+
+.hero2{
+    background-color: var(--Morado);
+    padding: 60px 5vw 150px;
+    position: relative;
+}
+
+.corazon-hero2{
+    position: absolute;
+
+    width: min(700px, 45vw);
+
+    top: 40px;
+    left: -185px;
+
+    z-index: 1;
+}
+
+.hero2-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    gap: 30px;
+
+    margin-bottom: 100px;
+}
+
+.grupo-titulo-hero2{
+    position: relative;
+    display: inline-block;
+
+}
+
+.titulo-hero2{
+    position: relative;
+    z-index: 2;
+    left: 100px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.titulo-hero2 p{
+    margin: 0;
+    font-family: var(--Alexandria);
+    color: var(--Crema);
+    font-size: 24px;
+    transform: translateX(10px);
+}
+
+.titulo-hero2 h2{
+    margin: 0;
+    font-family: var(--GrandHotel);
+    color: var(--Crema);
+    font-size: 85px;
+    font-weight: normal;
+}
+
+.btn-catalogo{
+    text-decoration: none;
+    color: var(--Crema);
+
+    border: 2px solid var(--Crema);
+    border-radius: 40px;
+
+    padding: 12px 35px;
+
+    font-family: var(--Alexandria);
+    font-size: 18px;
+    transition:0.3s ease;
+}
+
+.btn-catalogo:hover {
+    transform: scale(1.15);
+
+}
+
+/* CONTENEDOR DE PRODUCTOS */
+
+.productos{
+    display: flex;
+    justify-content: center;
+    gap: clamp(30px, 4vw, 100px);
+    flex-wrap: wrap;
+}
+
+/* TARJETA */
+
+.card{
+    width: 300px;
+    background-color: var(--Crema);
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* IMAGEN */
+
+.card-img{
+    height: auto;
+    background-color: var(--Naranja);
+
+    position: relative;
+    overflow: hidden;
+}
+.card-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.descripcion-hover{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.75);
+    color: var(--Crema);
+    font-family: var(--Alexandria);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: .4s ease;
+}
+
+.card:hover .descripcion-hover{
+
+    opacity: 1;
+}
+
+.card:hover .card-img img{
+
+    transform: scale(1.05);
+}
+
+.card:hover .descripcion-hover{
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* INFORMACIÓN */
+
+.card-info{
+    padding: 10px;
+}
+
+.card-info h3{
+    margin-bottom: 5px;
+
+    font-family: var(--Alexandria);
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #1f1f1f;
+}
+
+.card-info p{
+    font-family: var(--Alexandria);
+    font-size: 18px;
+    color: #8c8c8c;
+    margin: 2px 0;
+}
+
+.btn-card{
+    display: block;
+
+    margin: 0 8px 8px;
+    padding: 16px;
+
+    text-align: center;
+    text-decoration: none;
+
+    background-color: var(--Naranja);
+    color: var(--Crema);
+
+    border-radius: 20px;
+
+    font-family: var(--Alexandria);
+    font-size: 16px;
+
+    transition: .3s ease;
+}
+
+.btn-card:hover{
+    transform: scale(1.05);
+}
+
+
+
+/* HERO 3 */
+
+
+
+
+.hero3{
+    background-color: var(--Crema);
+    padding: 100px 50px 120px;
+    position: relative;
+    overflow: visible;
+    min-height: 900px;
+}
+
+.hero3-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.brillo-izq,
+.brillo-der{
+    width: 35px;
+}
+
+.hero3-titulo h2{
+    font-family: var(--GrandHotel);
+    color: var(--Naranja);
+    font-size: 80px;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.hero3-titulo p{
+    font-family: var(--GrandHotel);
+    color: var(--Naranja);
+    font-size: 45px;
+    line-height: 2;
+}
+
+.hero3-corazon{
+    display: block;
+    width: 80px;
+    margin: 15px auto 20px auto;
+}
+
+
+.hero3-contenido{
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.beneficios{
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+}
+
+.beneficio{
+    text-align: center;
+}
+
+.beneficio img{
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.beneficio h3{
+    font-family: var(--Alexandria);
+    color: var(--Morado);
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.beneficio p{
+    font-family: var(--Alexandria);
+    color: #666;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+
+.oso-container{
+    position: absolute;
+    left: 50%;
+    bottom: -200px;
+
+    transform: translateX(-50%);
+
+    z-index: 20;
+}
+
+.oso{
+    width: min(900px, 60vw);
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.estrella-naranja{
+    position: absolute;
+    width: 350px;
+    left: 60px;
+    bottom: 325px;
+}
+
+.estrella-morada{
+    position: absolute;
+    width: 150px;
+    right: 150px;
+    bottom: 340px;
+}
+
+
+
+/* HERO  4 */
+
+
+
+.hero4{
+    background-color: var(--Naranja);
+    min-height: 1200px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.testimonio{
+    position: relative;
+
+    width: min(650px, 70vw);
+    min-height: 180px;
+    background-color: #f4efef;
+
+    border-radius: 30px 30px 30px 30px;
+
+    padding: 25px 30px 25px 90px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.25);
+    transform: translateY(150px);
+    z-index: 5;
+}
+
+.testimonio1{
+    position: absolute;
+    top: 120px;
+    left: 250px;
+}
+
+.testimonio2{
+    position: absolute;
+    top: 370px;
+    right: 200px;
+}
+
+.testimonio3{
+    position: absolute;
+    top: 600px;
+    left: 250px;
+}
+
+.avatar{
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    background-color: var(--Morado);
+    border-radius: 50%;
+    overflow: hidden;
+
+    left: -110px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cabecera-testimonio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 8px;
+}
+
+.cabecera-testimonio h3{
+    font-family: var(--Alexandria);
+    font-size: 25px;
+    font-weight: 600;
+    color: #333;
+}
+
+.estrellas{
+    color: var(--Naranja);
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.contenido-testimonio p{
+    font-family: var(--Alexandria);
+    font-size: 20px;
+    color: #444;
+    line-height: 1.3;
+}
+
+.corazon-testimonio{
+    position: absolute;
+
+    width: 50px;
+
+    top: -12px;
+    right: -10px;
+}
+
+.linea1{
+    position:absolute;
+    top:-170px;
+    left:-100px;
+    width:40%;
+    z-index:4;
+}
+
+.linea2{
+    position:absolute;
+    top:10px;
+    right:-80px;
+    width:35%;
+    z-index:4;
+}
+
+.linea3{
+    position:absolute;
+    top:800px;
+    left:50px;
+    width:35%;
+    z-index:4;
+}
+
+.logo-hero4{
+    position: absolute;
+
+    width: 45%;
+    right: 5%;
+    bottom: -300px;
+
+    z-index: 1;
+}
+
+
+/* HERO  5 */
+
+
+.hero5{
+    background-color: #A67AF7;
+
+    padding: 80px 0 120px;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.hero5 h2{
+
+    font-family: "Grand Hotel", cursive;
+
+    font-size: 4rem;
+
+    color: var(--Crema);
+
+    font-weight: 400; 
+
+
+    margin-bottom: 20px;
+}
+
+.subtitulo{
+
+    font-family: "Alexandria", sans-serif;
+
+    font-size: 1.5rem;
+
+    font-weight: 600;
+
+    color: var(--Crema);
+
+    margin-bottom: 60px;
+}
+
+.personalizador{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+.colores{
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 60px;
+}
+
+.color-selector{
+
+    width: 90px;
+
+    cursor: pointer;
+
+    transition: transform .3s ease;
+}
+
+.color-selector:hover{
+
+    transform: scale(1.1);
+}
+
+
+.producto{
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.ovalo-crema{
+    position: absolute;
+
+    width: 550px;
+    height: 480px;
+
+    background: var(--Crema);
+
+    border-radius: 50%;
+
+    top: 10px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 1;
+}
+
+
+#conejo-principal{
+
+    width: min(500px, 35vw);
+
+    position: relative;
+
+    top: 20px;     
+    left: 5px;   
+
+    z-index: 2;
+}
+
+
+.card-producto{
+
+    background: var(--Crema);
+
+   
+    width: 350px;
+    height: 180px;
+
+    padding: 20px;
+
+    margin-top: 50px;
+
+    position: relative;
+    border-radius: 15px;
+
+    z-index: 3;
+}
+
+.card-producto h3{
+
+    font-family: "Alexandria", sans-serif;
+
+    font-size: 1.8rem;
+
+    margin-bottom: 10px;
+
+    color: #252525;
+}
+
+.card-producto p{
+
+    font-family: "Alexandria", sans-serif;
+
+    color: #666;
+
+    margin-bottom: 5px;
+}
+
+
+.btn-detalles{
+
+    display: block;
+
+    margin-top: 15px;
+
+    background: var(--Naranja);
+
+    color: var(--Crema);
+
+    text-decoration: none;
+
+    padding: 12px 20px;
+
+    border-radius: 40px;
+
+    font-family: "Alexandria", sans-serif;
+
+    font-weight: 600;
+    
+    transition: all 0.3s ease;
+}
+
+.btn-detalles:hover{
+    transform: scale(1.05);
+}
+
+.izquierda{
+    position: relative;
+    right: -10px;
+    top: -120px;
+}
+
+.derecha{
+    position: relative;
+    top: -120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.izquierda img:nth-child(1){
+    margin-left: 40px;
+}
+
+.izquierda img:nth-child(3){
+    margin-left: 40px;
+}
+
+.derecha img:nth-child(1){
+    margin-right: 40px;
+}
+
+.derecha img:nth-child(3){
+    margin-right: 40px;
+}
+
+.brillo4{
+    position: absolute;
+
+    width: 25px;
+
+    top: 90px;
+    left: 425px;
+
+    z-index: 1;
+}
+
+.brillo5{
+    position: absolute;
+
+    width: 25px;
+
+    top: 140px;
+    left: 1410px;
+
+    z-index: 1;
+}
+
+.figura3{
+    position: absolute;
+
+    width: 350px;
+
+    top: 200px;
+    right: -6%;
+
+    z-index: 1;
+}
+
+.figura31{
+    position: absolute;
+
+    width: 300px;
+
+    top: 560px;
+    left: -100px;
+
+    z-index: 1;
+}
+
+.figura1{
+    position: absolute;
+
+    width: 370px;
+
+    top: 710px;
+    left: -100px;
+
+    z-index: 0;
+}
+
+.figura11{
+    position: absolute;
+
+    width: 250px;
+
+    top: 410px;
+    right: -5%;
+
+    z-index: 2;
+}
+
+
+
+/*  PIE DE PÁGINA */
+
+
+
+footer{
+
+    background: var(--Crema);
+
+    padding: 30px 60px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+
+.footer-logo{
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.footer-logo img{
+
+    width: 140px;
+}
+
+.footer-logo p{
+
+    margin-top: 8px;
+
+    color: var(--Naranja);
+
+    font-family: "Alexandria", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 300;
+
+    text-align: center;
+}
+
+.footer-centro{
+
+    text-align: center;
+
+    color: var(--Naranja);
+}
+
+.footer-centro p{
+
+    font-family: "Alexandria", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 300;
+
+    margin-bottom: 8px;
+}
+
+.corazon-footer{
+
+    width: 30px;
+
+    margin-top: 8px;
+}
+
+.footer-redes{
+    position: relative;
+    right: 30px;
+}
+
+.footer-redes img{
+
+    width: 150px;
+
+    display: block;
+
+    transition: transform .3s ease;
+}
+
+.footer-redes img:hover{
+
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 1200px){
+
+    .hero h1{
+        font-size: 65px;
+    }
+
+    .descripcion{
+        font-size: 20px;
+    }
+
+    .titulo-hero2 h2{
+        font-size: 70px;
+    }
+
+    .corazon-hero2{
+        width: 450px;
+    }
+
+}
+
+
+
+@media (max-width: 900px){
+
+    /* MENÚ */
+
+    nav ul{
+        gap: 20px;
+    }
+
+    nav ul li a{
+        font-size: 28px;
+    }
+
+    /* HERO 1 */
+
+    .hero{
+        padding: 120px 20px 80px;
+    }
+
+    .hero-contenido{
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .hero h1{
+        font-size: 55px;
+    }
+
+    .descripcion{
+        font-size: 18px;
+        transform: none;
+    }
+
+    .btn-principal{
+        transform: none;
+    }
+
+    .segunda-linea{
+        transform: none;
+    }
+
+    .grupo-portada{
+        position: static;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .portada{
+        position: static;
+        width: 90%;
+        max-width: 450px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .corazon1,
+    .corazon2,
+    .brillo1,
+    .brillo2,
+    .brillo3,
+    .logocorazon{
+        display: none;
+    }
+
+    /* HERO 2 */
+
+    .hero2{
+        padding: 60px 20px 150px;
+    }
+
+    .hero2-header{
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .titulo-hero2{
+        left: 0;
+    }
+
+    .titulo-hero2 h2{
+        font-size: 55px;
+    }
+
+    .titulo-hero2 p{
+        font-size: 18px;
+    }
+
+    .corazon-hero2{
+        width: 250px;
+        left: -40px;
+        top: 20px;
+    }
+
+    .btn-catalogo{
+        padding: 10px 25px;
+    }
+
+    .card{
+        width: 250px;
+    }
+
+    /* HERO 3 */
+
+    .hero3{
+        padding: 80px 20px 300px;
+        min-height: auto;
+    }
+
+    .hero3-titulo h2{
+        font-size: 55px;
+    }
+
+    .hero3-titulo p{
+        font-size: 30px;
+    }
+
+    .hero3-contenido{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .beneficios{
+        width: 100%;
+        max-width: 500px;
+        gap: 40px;
+    }
+
+    .oso{
+        width: min(500px, 80vw);
+    }
+
+    .estrella-naranja,
+    .estrella-morada{
+        display: none;
+    }
+
+
+
+
+    /* HERO 4 */
+
+
+
+
+    .hero4{
+        min-height: auto;
+        padding: 80px 20px;
+    }
+
+    .testimonio,
+    .testimonio1,
+    .testimonio2,
+    .testimonio3{
+
+        position: relative;
+
+        top: auto;
+        left: auto;
+        right: auto;
+
+        transform: none;
+
+        margin: 30px auto;
+    }
+
+    .avatar{
+        width: 140px;
+        height: 140px;
+        left: -70px;
+    }
+
+    .linea1,
+    .linea2,
+    .linea3{
+        display: none;
+    }
+
+    .logo-hero4{
+        width: 60%;
+        right: -10%;
+        bottom: -100px;
+    }
+
+    /* HERO 5 */
+
+    .personalizador{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .colores{
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    .izquierda,
+    .derecha{
+        position: static;
+        align-items: center;
+    }
+
+    .color-selector{
+        width: 70px;
+    }
+
+    .ovalo-crema{
+        width: 380px;
+        height: 330px;
+    }
+
+    #conejo-principal{
+        width: 320px;
+        left: 0;
+    }
+
+    .card-producto{
+        width: 320px;
+    }
+
+    .brillo4,
+    .brillo5,
+    .figura1,
+    .figura11,
+    .figura3,
+    .figura31{
+        display: none;
+    }
+
+    /* FOOTER */
+
+    footer{
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .footer-redes{
+        right: 0;
+    }
+
+}
+
+
+
+@media (max-width: 600px){
+
+    nav ul li a{
+        font-size: 22px;
+    }
+
+    .hero h1{
+        font-size: 42px;
+    }
+
+    .descripcion{
+        font-size: 16px;
+    }
+
+    .titulo-hero2 h2{
+        font-size: 42px;
+    }
+
+    .hero3-titulo h2{
+        font-size: 42px;
+    }
+
+    .hero3-titulo p{
+        font-size: 24px;
+    }
+
+    .avatar{
+        width: 110px;
+        height: 110px;
+        left: -55px;
+    }
+
+    .testimonio{
+        padding: 20px 20px 20px 70px;
+    }
+
+    .contenido-testimonio p{
+        font-size: 17px;
+    }
+
+    .hero5 h2{
+        font-size: 2.8rem;
+    }
+
+    .subtitulo{
+        font-size: 1.1rem;
+    }
+
+    .ovalo-crema{
+        width: 300px;
+        height: 260px;
+    }
+
+    #conejo-principal{
+        width: 250px;
+    }
+
+    .card-producto{
+        width: 280px;
+    }
+
+}
+
+
+
+
+/*CARRITO*/
+
+
+
+
+#carrito-panel{
+
+    position: fixed;
+
+    top: 0;
+    right: -420px;
+
+    width: 390px;
+    height: 100vh;
+
+    background: var(--Crema);
+
+    border-left: 8px solid var(--Naranja);
+
+    box-shadow: -10px 0 30px rgba(0,0,0,.18);
+
+    padding: 30px;
+
+    overflow-y: auto;
+
+    transition: .45s ease;
+
+    z-index: 9999;
+
+}
+
+#carrito-panel.activo{
+
+    right: 0;
+
+}
+
+#carrito-panel h2{
+
+    font-family: var(--GrandHotel);
+
+    font-size: 3rem;
+
+    color: var(--Morado);
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.producto-carrito{
+
+    background: #fff;
+
+    border-radius: 22px;
+
+    padding: 18px;
+
+    margin-bottom: 20px;
+
+    border: 2px solid rgba(165,122,243,.2);
+
+    box-shadow: 0 8px 18px rgba(0,0,0,.08);
+
+    transition: .3s;
+
+}
+
+.producto-carrito:hover{
+
+    transform: translateY(-4px);
+
+}
+
+.producto-carrito p{
+
+    font-family: var(--Alexandria);
+
+    color: #444;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+
+}
+
+.producto-carrito strong{
+
+    color: var(--Morado);
+
+    font-size: 1.1rem;
+
+}
+
+
+.eliminar{
+
+    width: 100%;
+
+    border: none;
+
+    background: var(--Morado);
+
+    color: white;
+
+    padding: 11px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-family: var(--Alexandria);
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.eliminar:hover{
+
+    background: var(--Naranja);
+
+    transform: scale(1.03);
+
+}
+
+
+#total-carrito{
+
+    background: white;
+
+    border: 3px dashed var(--Naranja);
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    text-align: center;
+
+    font-family: var(--Alexandria);
+
+    font-size: 1.3rem;
+
+    font-weight: bold;
+
+    color: var(--Morado);
+
+    margin: 25px 0;
+
+}
+
+
+#cerrar-carrito{
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: var(--Naranja);
+
+    color: white;
+
+    font-family: var(--Alexandria);
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+#cerrar-carrito:hover{
+
+    background: var(--Morado);
+
+}
+
+
+#carrito-panel::-webkit-scrollbar{
+
+    width: 8px;
+
+}
+
+#carrito-panel::-webkit-scrollbar-thumb{
+
+    background: var(--Morado);
+
+    border-radius: 20px;
+
+}
+
+#carrito-panel::-webkit-scrollbar-track{
+
+    background: white;
+
+}
+
+
+.icon-item a{
+
+    position: relative;
+
+}
+
+#contador-carrito{
+
+    position: absolute;
+
+    top: -8px;
+
+    right: -10px;
+
+    width: 22px;
+
+    height: 22px;
+
+    background: var(--Naranja);
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: .75rem;
+
+    font-weight: bold;
+
+    font-family: var(--Alexandria);
+
+    box-shadow: 0 0 8px rgba(0,0,0,.2);
+
+}
